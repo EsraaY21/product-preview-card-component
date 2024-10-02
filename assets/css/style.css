@@ -1,0 +1,153 @@
+@import url('reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --dark-green: hsl(157, 43%, 18%);
+    --cream: hsl(30, 38%, 92%);
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-fraunces: 'Fraunces', serif;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: var(--ff-montserrat);
+    color: var(--dark-grayish-blue);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.fs_display {
+    font-weight: 700;
+    line-height: 2rem;
+    font-family: var(--ff-fraunces);
+    font-size: 2rem;
+}
+
+.card {
+    border-radius: 0.625rem;
+    background-color: white;
+    max-width: 37.5rem;
+}
+
+.card .image {
+    background-image: url('../images/image-product-desktop.jpg');
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.card .content {
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    padding: 2rem;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    /* 12px */
+    letter-spacing: 0.3125rem;
+    /* 5px */
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    /* 20px */
+}
+
+.title {
+    color: var(--very-dark-blue);
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+p {
+    margin-bottom: 1.875rem;
+    /* 30px */
+}
+
+.price {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.new_price {
+    color: var(--dark-cyan);
+}
+
+.old_price {
+    text-decoration: line-through;
+}
+
+button {
+    background-color: var(--dark-cyan);
+    font-weight: 700;
+    color: white;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    border-radius: 0.5rem;
+    border: 0px solid var(--dark-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+button:hover {
+    background-color: var(--dark-green);
+    cursor: pointer;
+}
+
+@media (max-width: 599px) {
+    body {
+        padding: 1rem 1.75rem;
+    }
+
+    .card
+    {
+        width: 100%;
+    }
+
+    .card .image {
+        height: 240px;
+        border-top-left-radius: 0.625rem;
+        border-top-right-radius: 0.625rem;
+        border-bottom-left-radius:0rem;
+    }
+}
+
+
+
+@media (min-width: 600px) {
+    body {
+        height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+
+    .card {
+        display: flex;
+    }
+
+    .card .image {
+        width: 50%;
+        height: 100%;
+        border-top-left-radius: 10px;
+        border-top-left-radius: 0.625rem;
+        border-bottom-left-radius: 0.625rem;
+    }
+
+    .card .content {
+        width: 50%;
+        height: 100%;
+    }
+}
